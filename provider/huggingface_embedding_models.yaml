@@ -1,0 +1,37 @@
+provider: huggingface
+label:
+  en_US: HuggingFace
+description:
+  en_US: Text embedding odels provided by HuggingFace.
+  zh_Hans: HuggingFace 提供的模型。
+icon_small:
+  en_US: image.png
+icon_large:
+  en_US: image.png
+background: "#E5E7EB"
+
+supported_model_types:
+  - text-embedding
+configurate_methods:
+  - predefined-model
+
+provider_credential_schema:
+  credential_form_schemas:
+    - variable: hf_api_key
+      label:
+        en_US: API Key
+      type: secret-input
+      required: true
+      placeholder:
+        zh_Hans: 在此輸入您的 API Key
+        en_US: Enter your API Key
+        
+models:
+  text_embedding:
+    predefined:
+      - "models/text_embedding/*.yaml"
+extra:
+  python:
+    provider_source: provider/huggingface_embedding_models.py
+    model_sources:
+      - "models/text_embedding/text_embedding.py"
