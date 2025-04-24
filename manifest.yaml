@@ -1,15 +1,15 @@
 version: 0.0.1
 type: plugin
 author: moraleai
-name: huggingface_embedding_models
+name: hf_embedding_models
 label:
-  en_US: HuggingFace Embedding Models
+  en_US: hf-Embedding-Models
 description:
   en_US: text embedding models provided by huggingface
   zh_Hans: HuggingFace 提供的文本嵌入模型
 icon: image.png
 resource:
-  memory: 268435456
+  memory: 2147483648  
   permission:
     tool:
       enabled: true
@@ -23,9 +23,11 @@ resource:
       moderation: false
     app:
       enabled: true
+    endpoint:
+      enabled: true
     storage:
       enabled: true
-      size: 1048576
+      size: 1073741824
 plugins:
   models:
     - provider/huggingface_embedding_models.yaml
@@ -40,4 +42,4 @@ meta:
     entrypoint: main
 created_at: 2025-04-18T11:28:49.621812+08:00
 privacy: PRIVACY.md
-verified: false
+verified: true

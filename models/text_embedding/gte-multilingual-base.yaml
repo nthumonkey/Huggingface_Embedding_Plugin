@@ -1,4 +1,4 @@
-model: Alibaba-NLP/gte-multilingual-base
+model: gte-multilingual-base
 label:
   en_US: GTE Multilingual Base
   zh_Hans: GTE 多語言模型
